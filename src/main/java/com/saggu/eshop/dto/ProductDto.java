@@ -1,8 +1,11 @@
 /* (C)2023 */
 package com.saggu.eshop.dto;
-
-public record ProductDto(String productId, String name, double price, String description) {
-
+ 
+import java.io.Serializable;
+ 
+public record ProductDto(String productId, String name, double price, String description)
+        implements Serializable {
+ 
     public ProductDto(String name, double price, String description) {
         this(null, name, price, description);
     }
